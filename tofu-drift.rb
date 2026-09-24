@@ -5,21 +5,21 @@
 class TofuDrift < Formula
   desc "Find drift, unmanaged and idle AWS resources in an OpenTofu/Terraform state"
   homepage "https://github.com/wardbox/tofu-drift"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.0/tofu-drift_0.1.0_darwin_amd64.tar.gz"
-      sha256 "1546b5a17ef9b43a9d0fc8ff5524179ef1236dab1679247fc84f651f0b6210d5"
+      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.1/tofu-drift_0.1.1_darwin_amd64.tar.gz"
+      sha256 "72a2a0b4e21e48ed02b11e87f982ad30867c0c0afebae88c94c9183fff3a04e4"
 
       define_method(:install) do
         bin.install "tofu-drift"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.0/tofu-drift_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3b8f05211eec8990c374ed15da0ced53a03bf1bac14ff982886e8e816f30233c"
+      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.1/tofu-drift_0.1.1_darwin_arm64.tar.gz"
+      sha256 "9a102557c05653f489bdfbe9d16af25d8b0dc7096428a47cf1b25487ac530949"
 
       define_method(:install) do
         bin.install "tofu-drift"
@@ -29,15 +29,15 @@ class TofuDrift < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.0/tofu-drift_0.1.0_linux_amd64.tar.gz"
-      sha256 "ea645599a4b86d34e8216116eda53c373b3958b14973111e9925f9bdf76bf261"
+      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.1/tofu-drift_0.1.1_linux_amd64.tar.gz"
+      sha256 "ad6efe8a08310c553db90442d832ef102f340f905871facf26dad47328d8d94b"
       define_method(:install) do
         bin.install "tofu-drift"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.0/tofu-drift_0.1.0_linux_arm64.tar.gz"
-      sha256 "289f6625250883f35c7edd86942c815347efea5c71f68baa84369eecfd0a6d61"
+      url "https://github.com/wardbox/tofu-drift/releases/download/v0.1.1/tofu-drift_0.1.1_linux_arm64.tar.gz"
+      sha256 "ca2729effef7af8bb9e0511ac21949aa2286c5bac701c3fd773cfc99748d6f93"
       define_method(:install) do
         bin.install "tofu-drift"
       end
